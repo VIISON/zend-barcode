@@ -33,6 +33,7 @@ class ObjectPluginManager extends AbstractPluginManager
     protected $invokableClasses = array(
         'codabar'           => 'Zend\Barcode\Object\Codabar',
         'code128'           => 'Zend\Barcode\Object\Code128',
+        'gs1128'            => 'Zend\Barcode\Object\GS1128',
         'code25'            => 'Zend\Barcode\Object\Code25',
         'code25interleaved' => 'Zend\Barcode\Object\Code25interleaved',
         'code39'            => 'Zend\Barcode\Object\Code39',
