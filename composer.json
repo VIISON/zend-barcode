@@ -12,10 +12,16 @@
             "Zend\\Barcode\\": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:VIISON/zend-validator.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.23",
         "zendframework/zend-stdlib": "~2.5",
-        "zendframework/zend-validator": "~2.5"
+        "zendframework/zend-validator": "dev-shopware-plugins as 2.5.1"
     },
     "require-dev": {
         "zendframework/zend-config": "~2.5",
