@@ -9,7 +9,7 @@
 
 namespace Zend\Barcode\Renderer;
 
-use Zend\Barcode\Object\ObjectInterface;
+use Zend\Barcode\BarcodeObject\BarcodeObjectInterface;
 
 /**
  * Class for rendering the barcode
@@ -130,14 +130,14 @@ interface RendererInterface
 
     /**
      * Set the barcode object
-     * @param  ObjectInterface $barcode
+     * @param  BarcodeObjectInterface $barcode
      * @return RendererInterface
      */
-    public function setBarcode(ObjectInterface $barcode);
+    public function setBarcode(BarcodeObjectInterface $barcode);
 
     /**
      * Retrieve the barcode object
-     * @return ObjectInterface
+     * @return BarcodeObjectInterface
      */
     public function getBarcode();
 

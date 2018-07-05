@@ -11,7 +11,7 @@ namespace ZendTest\Barcode\Renderer;
 
 use Zend\Barcode;
 use Zend\Barcode\Renderer\Svg;
-use Zend\Barcode\Object\Code39;
+use Zend\Barcode\BarcodeObject\Code39;
 
 /**
  * @group      Zend_Barcode
@@ -32,7 +32,7 @@ class SvgTest extends TestCommon
     {
         $svgCompare = file_get_contents(__DIR__ . '/_files/svg_transparency.xml');
 
-        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../Object/_fonts/Vera.ttf');
+        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../BarcodeObject/_fonts/Vera.ttf');
         $barcode = new Code39(array('text' => '0123456789'));
         $this->renderer->setBarcode($barcode);
 
@@ -50,7 +50,7 @@ class SvgTest extends TestCommon
     {
         $svgCompare = file_get_contents(__DIR__ . '/_files/svg_transparency.xml');
 
-        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../Object/_fonts/Vera.ttf');
+        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../BarcodeObject/_fonts/Vera.ttf');
         $barcode = new Code39(array('text' => '0123456789'));
         $this->renderer->setBarcode($barcode);
         $this->renderer->setTransparentBackground(true);
@@ -102,7 +102,7 @@ class SvgTest extends TestCommon
 
     public function testDrawReturnResource()
     {
-        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../Object/_fonts/Vera.ttf');
+        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../BarcodeObject/_fonts/Vera.ttf');
         $barcode = new Code39(array('text' => '0123456789'));
         $this->renderer->setBarcode($barcode);
         $resource = $this->renderer->draw();
@@ -112,7 +112,7 @@ class SvgTest extends TestCommon
 
     public function testDrawWithExistantResourceReturnResource()
     {
-        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../Object/_fonts/Vera.ttf');
+        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../BarcodeObject/_fonts/Vera.ttf');
         $barcode = new Code39(array('text' => '0123456789'));
         $this->renderer->setBarcode($barcode);
         $svgResource = new \DOMDocument();

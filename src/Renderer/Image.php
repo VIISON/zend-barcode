@@ -415,6 +415,7 @@ class Image extends AbstractRenderer
                 );
             }
 
+            echo 'Font: ', $font;
             $box = imagettfbbox($size, 0, $font, $text);
             switch ($alignment) {
                 case 'left':
@@ -427,6 +428,7 @@ class Image extends AbstractRenderer
                     $width = ($box[2] - $box[0]);
                     break;
             }
+            echo 'Font: ', $font;
             imagettftext(
                 $this->resource,
                 $size,
