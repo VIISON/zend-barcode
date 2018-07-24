@@ -15,7 +15,8 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/VIISON/zend-validator"
+            "url": "https://github.com/VIISON/zend-validator",
+            "no-api": true
         }
     ],
     "require": {
