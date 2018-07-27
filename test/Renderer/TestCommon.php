@@ -9,9 +9,9 @@
 
 namespace ZendTest\Barcode\Renderer;
 
-use ZendTest\Barcode\Object\TestAsset as TestAsset;
+use ZendTest\Barcode\BarcodeObject\TestAsset as TestAsset;
 use Zend\Barcode;
-use Zend\Barcode\Object;
+use Zend\Barcode\BarcodeObject;
 use Zend\Config;
 
 abstract class TestCommon extends \PHPUnit_Framework_TestCase
@@ -37,7 +37,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
         // message if timezone is not set within php.ini
         date_default_timezone_set('GMT');
 
-        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../Object/_fonts/Vera.ttf');
+        Barcode\Barcode::setBarcodeFont(__DIR__ . '/../BarcodeObject/_fonts/Vera.ttf');
         $this->renderer = $this->getRendererObject();
     }
 
@@ -51,7 +51,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
 
     public function testSetBarcodeObject()
     {
-        $barcode = new Object\Code39();
+        $barcode = new BarcodeObject\Code39();
         $this->renderer->setBarcode($barcode);
         $this->assertSame($barcode, $this->renderer->getBarcode());
     }
@@ -200,7 +200,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(211, $barcode->getWidth());
         $renderer->setBarcode($barcode);
         $renderer->draw();
@@ -211,7 +211,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(211, $barcode->getWidth());
         $renderer->setBarcode($barcode);
         $renderer->setHorizontalPosition('center');
@@ -223,7 +223,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(211, $barcode->getWidth());
         $renderer->setBarcode($barcode);
         $renderer->setHorizontalPosition('right');
@@ -235,7 +235,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(211, $barcode->getWidth());
         $renderer->setBarcode($barcode);
         $renderer->setLeftOffset(12);
@@ -248,7 +248,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(62, $barcode->getHeight());
         $renderer->setBarcode($barcode);
         $renderer->setVerticalPosition('top');
@@ -260,7 +260,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(62, $barcode->getHeight());
         $renderer->setBarcode($barcode);
         $renderer->setVerticalPosition('middle');
@@ -272,7 +272,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(62, $barcode->getHeight());
         $renderer->setBarcode($barcode);
         $renderer->setVerticalPosition('bottom');
@@ -284,7 +284,7 @@ abstract class TestCommon extends \PHPUnit_Framework_TestCase
     {
         $renderer = $this->getRendererWithWidth500AndHeight300();
         $renderer->setModuleSize(1);
-        $barcode = new Object\Code39(array('text' => '0123456789'));
+        $barcode = new BarcodeObject\Code39(array('text' => '0123456789'));
         $this->assertEquals(62, $barcode->getHeight());
         $renderer->setBarcode($barcode);
         $renderer->setTopOffset(12);
