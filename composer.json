@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=5.3.23",
-        "zendframework/zend-stdlib": "~2.5",
+        "zendframework/zend-stdlib": "~2.5.1",
         "zendframework/zend-validator": "dev-shopware-plugins as 2.5.1"
     },
     "require-dev": {
