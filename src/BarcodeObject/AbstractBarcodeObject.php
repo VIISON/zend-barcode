@@ -1214,7 +1214,7 @@ abstract class AbstractBarcodeObject implements BarcodeObjectInterface
                 for ($i = 0; $i < $textLength; $i ++) {
                     $leftPosition = $this->getQuietZone() + $space * ($i + 0.5);
                     $this->addText(
-                        $text{$i},
+                        $text[$i],
                         $this->fontSize * $this->factor,
                         $this->rotate(
                             $leftPosition,
